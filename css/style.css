@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@keyframes moveRight {
+    0%  {right:1000px;}
+	100% {right:0px;}
+}
+@keyframes moveLeft {
+    0%  {left:1000px;}
+	100% {left:0px;}
+}
+@keyframes headerDown {
+	0% {bottom:1000px;opacity:0;}
+	80% {bottom:0;opacity:0;}
+	100% {opacity:1;}
+}
+body {
+	background-color:#3895DB;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+.left {
+	background: url(../images/NovusLeft.png);
+	width:200px;
+	height:330px;
+	background-repeat:no-repeat;
+	float:left;
+	background-position: center;
+	position:relative;
+	animation: moveRight 2s;
+	transition: all 1s;
+	//left:70px;
+	z-index:1;
+}
+
+.eyes {
+	background: url(../images/NovusEyes.png);
+	width:200px;
+	height:300px;
+	background-repeat:no-repeat;
+	float:left;
+	margin:0 auto;
+    background-position: center;
+	position:relative;
+	margin-top:16px;
+	transition: all 1s;
+	z-index:2;
+}
+.right {
+	background: url(../images/NovusRight.png);
+	width:200px;
+	height:330px;
+	background-repeat:no-repeat;
+	float: left;
+	background-position: center;
+	position:relative;
+	//right:70px;
+	animation: moveLeft 2s;
+	transition: all 1s;
+	z-index:1;
+}
+.header {
+	display:table;
+	margin:0 auto;
+	text-align:center;
+}
+.header:hover .left,
+.header:hover .right{
+	margin-right:100px;
+	margin-left:100px;
+	margin-top:0;
+}
+h1 {
+	z-index:1;
+	padding-top:300px;
+	color:#FFFEF6;
+	font-family: 'Roboto', sans-serif;
+	font-size:4em;
+	animation: headerDown 2s;
+	position:relative;
+}
